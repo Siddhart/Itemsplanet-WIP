@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="./favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items Planet Official Website - Arctic Studio</title>
+    <link type="text/css" rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta property="og:title" content="Items Planet - Official Website" />
+    <meta property="og:description"
+        content="Browse or search for cool items on our website. We have listed a lot of cool and cheap items." />
+    <meta property="og:url" content="https://itemsplanet.com/" />
+    <meta property="og:image" content="https://itemsplanet.com/Storage/logo.png" />
+
+    <meta name="description"
+        content="Browse or search for cool items on our website. We have listed a lot of cool and cheap items.">
+</head>
+<style>
+    .hero {
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    img {
+        width: 250px;
+    }
+</style>
+
+<body>
+    <div class="app">
+        <div class="hero">
+            <img src="./logo.png" alt="itemsplanet-logo">
+            <h1>Itemsplanet.com is currently under maintenance</h1>
+            <p>This website is being build by <a style="color: black; text-decoration: underline;" target="_blank"
+                    href="https://www.github.com/Siddhartt">Siddhart</a></p>
+            <p id="time"></p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var countDownDate = new Date("Jun 15, 2021 15:37:25").getTime();
+    var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("time").innerHTML = "ETA - " + days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("time").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+</script>
